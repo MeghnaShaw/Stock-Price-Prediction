@@ -7,6 +7,9 @@ from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import LSTM, Dense, Dropout
 from sklearn.preprocessing import MinMaxScaler
 from datetime import datetime, timedelta
+import sys
+if sys.prefix == sys.base_prefix:
+    print("Warning: Not using a virtual environment. Consider using one.")
 
 @st.cache_data
 def get_sp500_tickers():
